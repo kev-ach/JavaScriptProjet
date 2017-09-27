@@ -1,11 +1,11 @@
-/***
-
-  Solution du TD http://defeo.lu/aws/tutorials/tutorial2
-
- **/
-
 /* cet objet contient l'état du système et son interface.
  */
+document.getElementById('buttonPlay').onclick = function() {
+  alert("Lancement de la partie");
+
+  var joueur1 =  "JoueurJaune";
+  var joueur2 =  "JoueurRouge";
+
 var p4 = {
 	 // cet tableau contient des pointeurs directs vers les cases
    // (noeuds <td> du DOM) du plateau dans la page html
@@ -71,7 +71,7 @@ var p4 = {
 	play: function(column) {
     // Vérifier si la partie est encore en cours
     if (this.game_status != 0) {
-  		if (window.confirm("La partie est finie!\n\nSouhaitez-vous recommencer?")) {
+  		if (window.confirm("La partie est finie !\n\nSouhaitez-vous recommencer ?")) {
   			this.reset();
 			}
 			return;
@@ -86,7 +86,7 @@ var p4 = {
       }
     }
     if (row === undefined) {
-      window.alert("La colonne est pleine!");
+      window.alert("Colonne pleine !");
       return;
     }
 
@@ -104,13 +104,13 @@ var p4 = {
     //message si la partie est finie...
     switch (this.game_status) {
       case -1:
-        window.alert("Partie Nulle!!");
+        window.alert("Egalité !");
         break;
       case 1:
-        window.alert("Victoire du joueur 1");
+        window.alert("Victoire de "+joueur1);
         break;
       case 2:
-        window.alert("Victoire du joueur 2");
+        window.alert("Victoire de "+joueur2);
         break;
     }
 	},
@@ -181,3 +181,4 @@ var p4 = {
 // On initialise le plateau et on l'ajoute à l'arbre du DOM
 // (dans la balise d'identifiant `jeu`).
 p4.init(document.querySelector('#jeu'));
+};
