@@ -3,8 +3,8 @@
 document.getElementById('buttonPlay').onclick = function() {
   alert("Lancement de la partie");
 
-  var joueur1 =  "JoueurJaune";
-  var joueur2 =  "JoueurRouge";
+  var joueur1 =  "JoueurRouge";
+  var joueur2 =  "JoueurJaune";
 
 var p4 = {
 	 // cet tableau contient des pointeurs directs vers les cases

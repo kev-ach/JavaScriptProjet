@@ -28,8 +28,6 @@
       if(isset($_GET['jouerPartie'])){
         $_SESSION['joueur1'] = $_GET['joueur1'];
         $_SESSION['joueur2'] = $_GET['joueur2'];
-        $test = 'azerty';
-        $test2 = 'abcde';
       ?>
       <button type="button" id="buttonPlay" name="buttonPlay" style="font-size:60px;">PLAY <i class="icon icon-arrow-circle-o-right"></i></button>
       <br/><br/><br/><br/><br/>
